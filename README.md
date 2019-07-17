@@ -34,6 +34,13 @@ git clone https://github.com/cloud-design-dev/tickstack-tf-ibm.git
 tickstack-tf-ibm
 ```
 
+You will also need to update the `install.yml` file to include your SSH-key. 
+
+```
+    ssh-authorized-keys:
+    - 'ssh-rsa example-key'
+```
+
 ### Configure credentials.tfvars file for authentication with IBM Cloud
 Copy the example `credentials.tfvars.tpl` to `credentials.tfvars` and then update `credentials.tfvars` with the appropriate IBM Cloud and SL API information. 
 
