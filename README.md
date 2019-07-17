@@ -65,3 +65,15 @@ terraform plan -var-file='./credentials.tfvars` -out tick.tfplan
 
 ```
 terraform apply tick.tfplan
+```
+
+## Run Ansible Plabooks 
+
+```
+ansible-playbook -i Hosts/inventory.env Playbooks/deploy-environment.yml
+```
+
+## Next Steps
+
+Visit `tickstack.your-domain.com:8888` to configure Chronograf. 
+
