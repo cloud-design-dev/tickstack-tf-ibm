@@ -1,5 +1,6 @@
 #  Local .terraform directories
 **/.terraform/*
+.DS_Store
 
 # .tfstate files
 *.tfstate
@@ -7,3 +8,7 @@
 
 # .tfvars files
 *.tfvars
+*.tfplan
+
+# Ignore Local consul backend
+backend.tf
