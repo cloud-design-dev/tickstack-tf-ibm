@@ -14,7 +14,6 @@ resource "random_id" "salt" {
   byte_length = 8
 }
 
-
 # Create our Tick Stack instance 
 resource "ibm_compute_vm_instance" "tick" {
   hostname             = "tick-${var.datacenter["us-east2"]}"
@@ -48,7 +47,6 @@ resource "dnsimple_record" "tick_dns" {
   type   = "A"
   ttl    = 3600
 }
-
 
 resource "local_file" "tickstack" {
   content = <<EOF

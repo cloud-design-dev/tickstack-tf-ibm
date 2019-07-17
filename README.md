@@ -50,24 +50,24 @@ cp credentials.tfvars.tpl credentials.tfvars
 nano/vi credentials.tfvars
 ```
 
-### Initialize Terraform** 
+### Initialize Terraform
 ```
 terraform init 
 ```
 
-### Plan deployment and save to file**
+### Plan deployment and save to file
 
 ```
 terraform plan -var-file='./credentials.tfvars` -out tick.tfplan
 ```
 
-### Apply deployment plan** 
+### Apply deployment plan
 
 ```
 terraform apply tick.tfplan
 ```
 
-## Run Ansible Plabooks 
+## Run Ansible Playbooks 
 
 ```
 ansible-playbook -i Hosts/inventory.env Playbooks/deploy-environment.yml
