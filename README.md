@@ -5,6 +5,7 @@ Deploy a TickStack instance on the IBM Cloud using Terraform and Ansible
  - A domain hosted at [DNSimple](https://dnsimple.com). 
  - Terraform and Ansible installed locally.
  - The Public SSH key of the server you are running this example on. 
+ - A Github Oauth Application for authentication with Chronograf. See [Chronograf Oauth docs](https://docs.influxdata.com/chronograf/v1.5/administration/managing-security/#creating-github-oauth-2-0-applications) for details on getting this set up. 
 
 > Note: If you use a different DNS hosting service you can check the [Terraform Providers](https://www.terraform.io/docs/providers/index.html) to see if they are supported. You will need to update the `variables.tf`, `main.tf`, and `providers.tf` files accordingly.
 
@@ -42,7 +43,7 @@ You will also need to update the `install.yml` file to include your SSH-key.
 ```
 
 ### Configure credentials.tfvars file for authentication with IBM Cloud
-Copy the example `credentials.tfvars.tpl` to `credentials.tfvars` and then update `credentials.tfvars` with the appropriate IBM Cloud and SL API information. 
+Copy the example `credentials.tfvars.tpl` to `credentials.tfvars` and then update `credentials.tfvars` with the appropriate IBM Cloud, SL API, and Github Oauth information. 
 
 ```
 cp credentials.tfvars.tpl credentials.tfvars
